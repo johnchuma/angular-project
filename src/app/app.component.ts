@@ -18,8 +18,6 @@ export class AppComponent  {
    startMarker = mapData.route.start
    destinationMarker = mapData.route.destination
    currentDestinationMarker = mapData.route.currentLocation;
-   busIcon = "https://static.vecteezy.com/system/resources/previews/022/794/442/non_2x/free-yellow-bus-images-transparent-yellow-bus-image-with-transparent-background-free-png.png"
-
    busMarkerOptions:google.maps.MarkerOptions = {
     position:this.currentDestinationMarker,
      clickable:true,
