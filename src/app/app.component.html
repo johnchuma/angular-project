@@ -7,8 +7,6 @@
        <h1 class="text-white font-medium text-xl">Tracker</h1>
        <div class="flex space-x-6 text-lg">
            <a  *ngFor="let route of routes" class="hover:text-indigo-600 text-white" [routerLink]="route.path" >{{ route.route }}</a>
-           <!-- <a class="bg-indigo-600 hover:bg-black hover:text-white transition-all duration-500  py-2 text-sm px-5 text-white rounded-sm ">Login</a> -->
-
          </div>
       </nav>
      </div>
