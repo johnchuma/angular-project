@@ -1,0 +1,35 @@
+<div class="mx-auto  w-11/12 ">
+  <!-- <div class=" text-indigo-600 font-semibold text-base">Displaying coordinates on map</div>
+  <div class="text-4xl text-black font-bold pt-2 pb-4">Coordinates on google maps</div> -->
+  <!-- <div class="text-3xl mb-4 text-indigo-600">Parcel {{trackerId }} details</div> -->
+  <div class="flex">
+    <div class="w-3/12">
+      <div class="text-2xl text-black mb-3">Track parcel</div>
+      <div class="text-gray-400">Start date</div>
+      <input [(ngModel)]="dateRange.start" type="date"/>
+      <div class="text-gray-400">End date</div>
+      <input [(ngModel)]="dateRange.end" type="date" class="mb-4"/>
+
+
+<br/>
+        <a (click)="refreshDetails()"  class="text-indigo-600 font-semibold">Find path</a>
+
+
+    </div>
+    <div class="w-9/12">
+      <google-map width="870"
+      [options]="mapOption"
+       class="mt-20 mx-auto w-full">
+    <map-marker [position]="startMarker" ></map-marker>
+    <map-marker [position]="destinationMarker" ></map-marker>
+    <!-- <map-marker [options]="busMarkerOptions" ></map-marker> -->
+    <map-polyline  [path]="waypoints"></map-polyline>
+
+    </google-map>
+    </div>
+  </div>
+
+
+
+
+</div>

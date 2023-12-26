@@ -1,0 +1,12 @@
+<div class="mx-auto w-11/12">
+  <h1 class="mb-6 text-indigo-600 text-3xl">Registered buses ({{ devices.length }})</h1>
+  <google-map width="1160"
+      [options]="mapOption"
+       class="mt-20 mx-auto w-8/12">
+       <div *ngFor = "let item of devices" >
+        <map-marker  [position]="{'lat':item.latest_status.properties.latitude,'lng':item.latest_status.properties.longitude}"></map-marker>
+       </div>
+
+
+    </google-map>
+</div>
